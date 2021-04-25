@@ -641,9 +641,6 @@
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.ARKit.FaceTracking.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.ARKit.FaceTracking.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
@@ -688,9 +685,6 @@
     </Reference>
     <Reference Include="Unity.XR.ARSubsystems">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARSubsystems.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARKit.FaceTracking">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.ARKit.FaceTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARFoundation.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARFoundation.Editor.dll</HintPath>

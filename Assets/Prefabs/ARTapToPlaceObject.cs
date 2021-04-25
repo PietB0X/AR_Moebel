@@ -42,8 +42,13 @@ public class ARTapToPlaceObject : MonoBehaviour
 
     private void UpdatePlacementPose()
     {
+        if (Camera.current == null)
+        {
+            return;
+        }
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
+
         raycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
 
         placementPoseIsValid = hits.Count > 0;
@@ -51,5 +56,7 @@ public class ARTapToPlaceObject : MonoBehaviour
         {
             placementPose = hits[0].pose;
         }
+        
+        Debug.Log(Camera.current);
     }
 }
