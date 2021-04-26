@@ -56,10 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ARTapToPlaceObject.cs" />
     <Compile Include="Assets\Scripts\ARPlacement.cs" />
+    <Compile Include="Assets\Scripts\ARTapToPlaceObject.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Lean\READ ME.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Projekte\Unity\2020.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -698,6 +699,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="LeanTouch.csproj">
+      <Project>{6BCBB588-B438-207C-499D-2A394CD04E3B}</Project>
+      <Name>LeanTouch</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{C26C62D3-8495-78BE-DFA5-45E896AF063E}</Project>
+      <Name>LeanCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

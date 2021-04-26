@@ -12,6 +12,7 @@ public class ARPlacement : MonoBehaviour
     private GameObject spawnedObject;
     private Pose PlacementPose;
     private ARRaycastManager aRRaycastManager;
+    private bool isObjectPlaced;
     private bool placementPoseIsValid = false;
 
     void Start()
@@ -22,14 +23,19 @@ public class ARPlacement : MonoBehaviour
     // need to update placement indicator, placement pose and spawn 
     void Update()
     {
-        if (spawnedObject == null && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (!isObjectPlaced)
         {
-            ARPlaceObject();
+            if (spawnedObject == null && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                ARPlaceObject();
+            }
+
+
+            UpdatePlacementPose();
+            UpdatePlacementIndicator();
+
         }
 
-
-        UpdatePlacementPose();
-        UpdatePlacementIndicator();
 
 
     }
@@ -62,6 +68,8 @@ public class ARPlacement : MonoBehaviour
     void ARPlaceObject()
     {
         spawnedObject = Instantiate(arObjectToSpawn, PlacementPose.position, PlacementPose.rotation);
+        isObjectPlaced = true;
+        placementIndicator.SetActive(false);
     }
 
 
