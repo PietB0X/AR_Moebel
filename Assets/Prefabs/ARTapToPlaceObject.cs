@@ -8,6 +8,7 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARTapToPlaceObject : MonoBehaviour
 {
+    public GameObject objectToPlace;
     public GameObject placementIndicator;
 
     private ARSessionOrigin arOrigin;
@@ -25,6 +26,16 @@ public class ARTapToPlaceObject : MonoBehaviour
     {
         UpdatePlacementPose();
         UpdatePlacementIndicator();
+
+        if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            PlaceObeject();
+        }
+    }
+
+    private void PlaceObeject()
+    {
+        Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
     }
 
     private void UpdatePlacementIndicator()
