@@ -33,7 +33,7 @@ public class ARPlacement : MonoBehaviour
 
             UpdatePlacementPose();
             UpdatePlacementIndicator();
-
+ 
         }
 
 
