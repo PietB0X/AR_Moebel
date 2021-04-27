@@ -2,12 +2,16 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ARPlacement
+    LeanCommon.dll:
+    - Lean.Common.LeanSelectable
     LeanTouch.dll:
     - Lean.Touch.LeanDragTranslate
     - Lean.Touch.LeanTouch
     - Lean.Touch.LeanTwistRotateAxis
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.XR.ARCore.Editor.dll:
+    - UnityEditor.XR.ARCore.ARCoreSettings
     Unity.XR.ARFoundation.dll:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
@@ -33,6 +37,11 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -64,38 +73,60 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1450}
+    - Class: 114
+      Script: {instanceID: 1452}
+    - Class: 114
+      Script: {instanceID: 1454}
+    - Class: 114
       Script: {instanceID: 1456}
     - Class: 114
-      Script: {instanceID: 1600}
+      Script: {instanceID: 1762}
     - Class: 114
-      Script: {instanceID: 2236}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2346}
+      Script: {instanceID: 2496}
     - Class: 114
-      Script: {instanceID: 2422}
+      Script: {instanceID: 2524}
     - Class: 114
-      Script: {instanceID: 3032}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 3036}
+      Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3400}
+      Script: {instanceID: 3226}
     - Class: 114
-      Script: {instanceID: 3448}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3600}
     - Class: 114
-      Script: {instanceID: 3686}
+      Script: {instanceID: 3650}
     - Class: 114
-      Script: {instanceID: 3728}
+      Script: {instanceID: 3656}
     - Class: 114
-      Script: {instanceID: 4268}
+      Script: {instanceID: 3890}
     - Class: 114
-      Script: {instanceID: 4412}
+      Script: {instanceID: 3932}
+    - Class: 114
+      Script: {instanceID: 4238}
+    - Class: 114
+      Script: {instanceID: 4490}
+    - Class: 114
+      Script: {instanceID: 4638}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:

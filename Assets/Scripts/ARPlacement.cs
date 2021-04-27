@@ -12,7 +12,7 @@ public class ARPlacement : MonoBehaviour
     private GameObject spawnedObject;
     private Pose PlacementPose;
     private ARRaycastManager aRRaycastManager;
-    private bool isObjectPlaced;
+    private int countObjectPlaced = 0;
     private bool placementPoseIsValid = false;
 
     void Start()
@@ -24,9 +24,10 @@ public class ARPlacement : MonoBehaviour
     void Update()
     {        
 
-            if (isObjectPlaced = false && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+            if (countObjectPlaced < 3 && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 ARPlaceObject();
+                countObjectPlaced++;
             }
 
             UpdatePlacementPose();
@@ -41,8 +42,16 @@ public class ARPlacement : MonoBehaviour
     {
         //if (spawnedObject == null && placementPoseIsValid)
         //{
-       
+        if (countObjectPlaced > 2)
+        {
+            placementIndicator.SetActive(false);
+
+        }
+        else
+        {
+            placementIndicator.SetActive(true);
             placementIndicator.transform.SetPositionAndRotation(PlacementPose.position, PlacementPose.rotation);
+        }
         
         //}
         //else
@@ -56,7 +65,7 @@ public class ARPlacement : MonoBehaviour
         if (Camera.current == null)
         {
             return;
-        }
+        } 
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
         aRRaycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
@@ -68,11 +77,9 @@ public class ARPlacement : MonoBehaviour
         }
     }
 
-    public void ARPlaceObject()
+    void ARPlaceObject()
     {
         spawnedObject = Instantiate(arObjectToSpawn, PlacementPose.position, PlacementPose.rotation);
-        isObjectPlaced = true;
-        placementIndicator.SetActive(false);
        
 
     }

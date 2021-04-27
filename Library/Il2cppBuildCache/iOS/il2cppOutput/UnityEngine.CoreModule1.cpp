@@ -15973,6 +15973,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_get_worldToLocalMatrix_Injecte
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_get_localToWorldMatrix_Injected_m990CE30D1A3D41A3247D4F9E73CA8B725466767B (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Matrix4x4_tDE7FF4F2E2EA284F6EFE00D627789D0E5B8B4461 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::SetPositionAndRotation_Injected(UnityEngine.Vector3&,UnityEngine.Quaternion&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_SetPositionAndRotation_Injected_m935C7A0C1BC5C1BCDC7FFE8B757F58D9540485D3 (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * ___position0, Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 * ___rotation1, const RuntimeMethod* method);
+// UnityEngine.Quaternion UnityEngine.Quaternion::Euler(System.Single,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  Quaternion_Euler_m37BF99FFFA09F4B3F83DC066641B82C59B19A9C3 (float ___x0, float ___y1, float ___z2, const RuntimeMethod* method);
+// UnityEngine.Quaternion UnityEngine.Transform::get_localRotation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  Transform_get_localRotation_mA6472AE7509D762965275D79B645A14A9CCF5BE5 (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, const RuntimeMethod* method);
+// UnityEngine.Quaternion UnityEngine.Quaternion::op_Multiply(UnityEngine.Quaternion,UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  Quaternion_op_Multiply_m5C7A60AC0CDCA2C5E2F23E45FBD1B15CA152D7B0 (Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  ___lhs0, Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  ___rhs1, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::set_localRotation(UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localRotation_m1A9101457EC4653AFC93FCC4065A29F2C78FA62C (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  ___value0, const RuntimeMethod* method);
+// UnityEngine.Quaternion UnityEngine.Quaternion::Inverse(UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  Quaternion_Inverse_mE2A449C7AC8A40350AAC3761AE1AFC170062CAC9 (Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  ___rotation0, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::set_rotation(UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_rotation_m1B5F3D4CE984AB31254615C9C71B0E54978583B4 (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::Rotate(UnityEngine.Vector3,UnityEngine.Space)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_Rotate_m61816C8A09C86A5E157EA89965A9CC0510A1B378 (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___eulers0, int32_t ___relativeTo1, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::RotateAroundInternal_Injected(UnityEngine.Vector3&,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_RotateAroundInternal_Injected_m70D2B2635B5CB12008A8207829D178BF4970E9BD (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * ___axis0, float ___angle1, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Transform::TransformDirection(UnityEngine.Vector3)
@@ -29397,6 +29411,79 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_SetPositionAndRotation_m33418A
 {
 	{
 		Transform_SetPositionAndRotation_Injected_m935C7A0C1BC5C1BCDC7FFE8B757F58D9540485D3(__this, (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E *)(&___position0), (Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 *)(&___rotation1), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Transform::Rotate(UnityEngine.Vector3,UnityEngine.Space)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_Rotate_m61816C8A09C86A5E157EA89965A9CC0510A1B378 (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___eulers0, int32_t ___relativeTo1, const RuntimeMethod* method)
+{
+	Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	bool V_1 = false;
+	{
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_0 = ___eulers0;
+		float L_1 = L_0.get_x_2();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_2 = ___eulers0;
+		float L_3 = L_2.get_y_3();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_4 = ___eulers0;
+		float L_5 = L_4.get_z_4();
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_6;
+		L_6 = Quaternion_Euler_m37BF99FFFA09F4B3F83DC066641B82C59B19A9C3(L_1, L_3, L_5, /*hidden argument*/NULL);
+		V_0 = L_6;
+		int32_t L_7 = ___relativeTo1;
+		V_1 = (bool)((((int32_t)L_7) == ((int32_t)1))? 1 : 0);
+		bool L_8 = V_1;
+		if (!L_8)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_9;
+		L_9 = Transform_get_localRotation_mA6472AE7509D762965275D79B645A14A9CCF5BE5(__this, /*hidden argument*/NULL);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_10 = V_0;
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_11;
+		L_11 = Quaternion_op_Multiply_m5C7A60AC0CDCA2C5E2F23E45FBD1B15CA152D7B0(L_9, L_10, /*hidden argument*/NULL);
+		Transform_set_localRotation_m1A9101457EC4653AFC93FCC4065A29F2C78FA62C(__this, L_11, /*hidden argument*/NULL);
+		goto IL_0066;
+	}
+
+IL_0036:
+	{
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_12;
+		L_12 = Transform_get_rotation_m4AA3858C00DF4C9614B80352558C4C37D08D2200(__this, /*hidden argument*/NULL);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_13;
+		L_13 = Transform_get_rotation_m4AA3858C00DF4C9614B80352558C4C37D08D2200(__this, /*hidden argument*/NULL);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_14;
+		L_14 = Quaternion_Inverse_mE2A449C7AC8A40350AAC3761AE1AFC170062CAC9(L_13, /*hidden argument*/NULL);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_15 = V_0;
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_16;
+		L_16 = Quaternion_op_Multiply_m5C7A60AC0CDCA2C5E2F23E45FBD1B15CA152D7B0(L_14, L_15, /*hidden argument*/NULL);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_17;
+		L_17 = Transform_get_rotation_m4AA3858C00DF4C9614B80352558C4C37D08D2200(__this, /*hidden argument*/NULL);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_18;
+		L_18 = Quaternion_op_Multiply_m5C7A60AC0CDCA2C5E2F23E45FBD1B15CA152D7B0(L_16, L_17, /*hidden argument*/NULL);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_19;
+		L_19 = Quaternion_op_Multiply_m5C7A60AC0CDCA2C5E2F23E45FBD1B15CA152D7B0(L_12, L_18, /*hidden argument*/NULL);
+		Transform_set_rotation_m1B5F3D4CE984AB31254615C9C71B0E54978583B4(__this, L_19, /*hidden argument*/NULL);
+	}
+
+IL_0066:
+	{
+		return;
+	}
+}
+// System.Void UnityEngine.Transform::Rotate(System.Single,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_Rotate_mA3AE6D55AA9CC88A8F03C2B0B7CB3DB45ABA6A8E (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, float ___xAngle0, float ___yAngle1, float ___zAngle2, const RuntimeMethod* method)
+{
+	{
+		float L_0 = ___xAngle0;
+		float L_1 = ___yAngle1;
+		float L_2 = ___zAngle2;
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_3;
+		memset((&L_3), 0, sizeof(L_3));
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_3), L_0, L_1, L_2, /*hidden argument*/NULL);
+		Transform_Rotate_m61816C8A09C86A5E157EA89965A9CC0510A1B378(__this, L_3, 1, /*hidden argument*/NULL);
 		return;
 	}
 }
