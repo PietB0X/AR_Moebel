@@ -1,0 +1,3 @@
+{"msg":"init","dagFile":"artifacts/tundra.dag","targets":[]}
+{"msg":"inputSignatureChanged","annotation":"Copy Additional C++ File /Users/pedram/Documents/GitHub/AR_Moebel/Library/Il2cppBuildCache/iOS/il2cppOutput/UnityClassRegistration.cpp","index":2,"changes":[{"key":"InputFileDigest","path":"/Users/pedram/Documents/GitHub/AR_Moebel/Library/Il2cppBuildCache/iOS/additionalCppFiles/UnityClassRegistration.cpp","dependency":"explicit"}]}
+{"msg":"noderesult","annotation":"Copy Additional C++ File /Users/pedram/Documents/GitHub/AR_Moebel/Library/Il2cppBuildCache/iOS/il2cppOutput/UnityClassRegistration.cpp","index":2,"exitcode":0}

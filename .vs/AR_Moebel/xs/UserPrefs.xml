@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{03B83910-0DF0-E338-62D0-E3FDBB096459}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ARPlacement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/ARPlacement.cs" Line="65" Column="1" />
+      <File FileName="Assets/Lean/Touch/Scripts/LeanTouch.cs" Line="315" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AR_Moebel" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2d393b2b-5b2f-496d-98e6-d900b3c47d97" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

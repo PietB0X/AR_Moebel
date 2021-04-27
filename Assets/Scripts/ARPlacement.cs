@@ -22,38 +22,50 @@ public class ARPlacement : MonoBehaviour
 
     // need to update placement indicator, placement pose and spawn 
     void Update()
-    {
-        if (countObjectPlaced <= 3)
-        {
-            if (spawnedObject == null && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+    {        
+
+            if (countObjectPlaced < 3 && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 ARPlaceObject();
+                countObjectPlaced++;
             }
-
 
             UpdatePlacementPose();
             UpdatePlacementIndicator();
  
-        }
+        
 
 
 
     }
     void UpdatePlacementIndicator()
     {
-        if (spawnedObject == null && placementPoseIsValid)
+        //if (spawnedObject == null && placementPoseIsValid)
+        //{
+        if (countObjectPlaced > 2)
+        {
+            placementIndicator.SetActive(false);
+
+        }
+        else
         {
             placementIndicator.SetActive(true);
             placementIndicator.transform.SetPositionAndRotation(PlacementPose.position, PlacementPose.rotation);
         }
-        else
-        {
-            placementIndicator.SetActive(false);
-        }
+        
+        //}
+        //else
+        //{
+         //   placementIndicator.SetActive(false);
+        //}
     }
 
     void UpdatePlacementPose()
     {
+        if (Camera.current == null)
+        {
+            return;
+        }
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
         aRRaycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
@@ -68,8 +80,8 @@ public class ARPlacement : MonoBehaviour
     void ARPlaceObject()
     {
         spawnedObject = Instantiate(arObjectToSpawn, PlacementPose.position, PlacementPose.rotation);
-        countObjectPlaced = countObjectPlaced + 1;
-        placementIndicator.SetActive(false);
+       
+
     }
 
 
